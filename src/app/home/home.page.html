@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Cooler
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="4" text-center>
+        <ion-toggle [(ngModel)]="power"  (ionChange)="powerChange(power);"></ion-toggle>
+        <div class="powr">Power</div>
+      </ion-col>
+      <ion-col size="4" text-center>
+          <ion-toggle [(ngModel)]="pump"  (ionChange)="pumpChange(pump);"></ion-toggle>
+          <div class="powr">Pump</div>
+        </ion-col>
+        <ion-col size="4" text-center>
+            <ion-toggle [(ngModel)]="swing" (ionChange)="swingChange(swing);"></ion-toggle>
+            <div class="powr">Swing</div>
+          </ion-col>
+    </ion-row>
+    <ion-row class="rsnge1">
+      <ion-col size="2" text-center class="p-0">
+       <img src="assets/icon/fan--.png" class="img-float">
+         
+        </ion-col>
+        <ion-col size="9" text-center class="p-0 m-top">
+            <ion-range  min="0" max="3" step="1" snaps="true" (ionChange)="fanSpeed($event);"></ion-range>
+            <ion-row style="margin-top:-28px;">
+              <ion-col size="4" text-right>
+            <span class="font">Low</span>
+            </ion-col>
+            <ion-col size="4" text-right>
+                <span class="font">Medium</span>
+                </ion-col>
+                <ion-col size="4" text-right>
+                    <span class="font">High</span>
+                    </ion-col>
+
+
+</ion-row>
+          </ion-col>
+        <ion-col size="12" text-center>
+          
+          <div class="humidity"> Fan</div>
+       
+          </ion-col>
+      </ion-row>
+
+    <ion-row class="rsnge1">
+        <ion-col size="2" text-center class="p-0">
+         <img src="assets/icon/humidity.png" class="img-float">
+           
+          </ion-col>
+          <ion-col size="9" text-center class="p-0 m-top">
+              <ion-range  min="0" max="4" step="1" snaps="true" (ionChange)="humidityChange($event);"></ion-range>
+            </ion-col>
+          <ion-col size="12" text-center>
+            
+            <div class="humidity" style="margin-top:-20px;"> Humidity</div>
+         
+            </ion-col>
+        </ion-row>
+  
+        <ion-row class="last-m">
+            <ion-col size="6" text-center class="p-0 m-top">
+             <img src="assets/icon/appointment.png" >
+             <div class="humidity"> Scheduler</div>
+               
+              </ion-col>
+              <ion-col size="6" text-center class="p-0 m-top">
+                  <img src="assets/icon/time.png" >
+                  <div class="humidity"> Time</div>
+                </ion-col>
+            
+            </ion-row>
+</ion-content>
+<ion-footer class="foote">
+  &nbsp;&nbsp;&nbsp;
+  </ion-footer>
